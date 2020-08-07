@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import TeacherList from "../pages/TeacherList";
 import Favorites from "../pages/Favorites";
-import { Ionicons, FontAwesome } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 
 const { Screen, Navigator } = createBottomTabNavigator();
 
@@ -30,8 +30,8 @@ const StudyTabs = () => (
 
       labelStyle: {
         fontFamily: "Archivo_700Bold",
-        fontSize: 12,
-        marginLeft: 20,
+        fontSize: 14,
+        marginLeft: 16,
       },
       inactiveBackgroundColor: "#fafafc",
       activeBackgroundColor: "#ebebf5",
@@ -60,14 +60,8 @@ const StudyTabs = () => (
       component={Favorites}
       options={{
         tabBarLabel: "Favoritos",
-        tabBarIcon: ({ color, size, focused }) => {
-          return (
-            <Ionicons
-              name="md-heart-outline"
-              color={focused ? "#f51d0a" : color}
-              size={size}
-            />
-          );
+        tabBarIcon: ({ color, size, focused}) => {
+          return <Ionicons name="ios-heart" color={focused ? "#f51d0a" : color} size={size} />;
         },
       }}
     />

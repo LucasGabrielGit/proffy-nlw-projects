@@ -4,6 +4,9 @@
         "Borderless",
         "Ionicons",
         "Proffys",
-        "esnext"
+        "esnext",
+        "favorited",
+        "unfavorite",
+        "whatsapp"
     ]
 }
