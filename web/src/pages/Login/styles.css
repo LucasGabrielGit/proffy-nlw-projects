@@ -1,0 +1,152 @@
+#page-login {
+  width: 100vw;
+  height: 100vh;
+}
+
+#page-login-side {
+  font: 700 2.4rem Archivo;
+  display: flex;
+  text-align: left;
+  background: var(--color-background-login);
+}
+
+#logo-container img {
+  width: 100%;
+  height: 16rem;
+  padding: 2.3rem;
+}
+
+#logo-container h2 {
+  padding: 1.2rem;
+  font: 700 3.2rem Archivo;
+  text-align: center;
+  color: var(--color-text-in-primary);
+}
+
+#page-login main {
+  background: var(--color-background);
+  height: 100vh;
+  max-width: 72.5rem;
+  padding: 2rem;
+}
+
+#page-login main form fieldset {
+  border: 0;
+  padding: 0 2.2rem;
+  width: 90vw;
+}
+
+#page-login main fieldset legend {
+  font: 700 3.4rem Archivo;
+  color: var(--color-text-title);
+  margin-bottom: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 1.6rem;
+  padding-top: 3.2rem;
+}
+
+#page-login main fieldset footer {
+  padding-top: 3.2rem;
+}
+
+#page-login main fieldset footer a {
+  text-decoration: none;
+  font: 700 1.8rem Poppins;
+  color: var(--color-primary);
+}
+
+#actions-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#actions-info span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 700 1.4rem Poppins;
+}
+#actions-info span img{
+  margin-left: 0.8rem;  
+}
+
+#page-login main form button {
+  width: 100%;
+  height: 4.6rem;
+  background: var(--color-secondary);
+  color: var(--color-button-text);
+  border: 0;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font: 700 1.6rem Archivo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+  margin-top: 3.6rem;
+}
+
+#page-login main form button:hover {
+  background: var(--color-secondary-dark);
+}
+
+#remember-me {
+  font-weight: bold;
+  margin-top: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#check {
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+
+#check input {
+  margin-right: 1.2rem;
+}
+
+#remember-me a {
+  font: 700 1.4rem Poppins;
+  text-decoration: none;
+  color: var(--color-text-in-link);
+}
+#page-login main form #remember-me-check > label {
+  margin-left: 1.2rem;
+}
+
+@media (min-width: 700px) {
+  #page-login {
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #page-login #page-login-side {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-background-login);
+  }
+
+  #page-login main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #page-login main form fieldset {
+    width: 40vw;
+  }
+}

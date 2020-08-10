@@ -1,7 +1,7 @@
 :root {
   font-size: 60%;
 
-  --color-background: #e3e3e4;
+  --color-background: #f0f0f7;
   --color-primary-lighter: #9871f5;
   --color-primary-light: #916bea;
   --color-primary: #8257e5;
@@ -15,10 +15,14 @@
   --color-text-complement: #9c98a6;
   --color-text-base: #6a6180;
   --color-line-in-white: #e6e6f0;
-  --color-input-background: #f8f8fc;
+  --color-input-background: #ffffff;
   --color-button-text: #ffffff;
   --color-box-base: #ffffff;
   --color-box-footer: #fafafc;
+  --color-background-login: #8257e5;
+  --color-background-login-content: #f8f9fa;
+  --color-text-in-link: #9c98a6;
+  --color-background-button: #dcdce5;
 }
 
 * {
