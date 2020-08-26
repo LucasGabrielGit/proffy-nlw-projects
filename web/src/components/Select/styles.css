@@ -22,18 +22,19 @@
   font: 1.6rem Archivo;
 }
 
-.select-block select option {
-  border: 0;
-  border-radius: 0.8rem;
+.select-block select > option{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3.2rem;
 }
 
 .select-block:focus-within::after {
-  width: calc(100%-3.2rem);
-  height: 2px;
+  width: 0;
+  height: 3.4rem;
   content: "";
-  border-bottom: 0.5px solid var(--color-primary-light);
+  border-left: 3px solid var(--color-primary-light);
   position: absolute;
-  left: 1.6rem;
-  right: 1.6rem;
-  bottom: 0;
+  left: 0;
+  top: 4.2rem;
 }

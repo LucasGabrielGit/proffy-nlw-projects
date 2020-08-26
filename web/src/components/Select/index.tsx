@@ -1,5 +1,4 @@
 import React, { SelectHTMLAttributes } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {

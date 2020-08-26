@@ -1,15 +1,15 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState, FormEvent } from "react";
 import { useHistory } from "react-router-dom";
 
 import PageHeader from "../../components/PageHeader";
 import Input from "../../components/Input";
-
 import warningIcon from "../../assets/images/icons/warning.svg";
 
-import "./styles.css";
 import Textarea from "../../components/Textarea";
 import Select from "../../components/Select";
 import api from "../../services/api";
+import "./styles.css";
 
 function TeacherForm() {
   const history = useHistory();
@@ -28,6 +28,7 @@ function TeacherForm() {
 
   function addNewScheduleItem() {
     setScheduleItems([
+      //Copia os dados já existentes dentro de um array
       ...scheduleItems,
       {
         week_day: 0,
@@ -62,7 +63,7 @@ function TeacherForm() {
   function setScheduleItemValue(
     position: number,
     field: string,
-    value: string
+    value: string,
   ) {
     const updatedScheduleItems = scheduleItems.map((scheduleItem, index) => {
       if (index === position) {
@@ -159,7 +160,7 @@ function TeacherForm() {
 
             {scheduleItems.map((scheduleItem, index) => {
               return (
-                <div className="schedule-item" key={scheduleItem.week_day}>
+                <div className="schedule-item" key={index}>
                   <Select
                     name="week_day"
                     label="Dia da semana"
@@ -195,6 +196,8 @@ function TeacherForm() {
                       setScheduleItemValue(index, "to", e.target.value)
                     }
                   />
+
+                  {/* <button type="button">- Remover horário</button> */}
                 </div>
               );
             })}

@@ -1,10 +1,12 @@
 #page-teacher-list {
   width: 100vw;
   height: 100vh;
+  padding: 0;
 }
 
 #search-teachers {
   margin-top: 3.2rem;
+  width: 70vw;
 }
 
 #search-teachers label {

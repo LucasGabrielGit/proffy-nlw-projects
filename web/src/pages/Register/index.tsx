@@ -3,13 +3,10 @@ import InputLogin from "../../components/InputLogin";
 
 //Import images
 import logoImg from "../../assets/images/logo.svg";
-import purpleHeartIcon from "../../assets/images/icons/purple-heart.svg";
-
 //Import style page
 import "./styles.css";
-import HeaderPage from "../../components/HeaderPage";
 
-const Login = () => {
+const Register = () => {
   const [isHidden, setIsHidden] = useState(true);
 
   function toggleShowPassword() {
@@ -26,10 +23,21 @@ const Login = () => {
       </div>
       <main>
         <form>
-          <HeaderPage />
           <fieldset>
-            <legend>Fazer login</legend>
-
+            <legend>Cadastro</legend>
+            <span>Preencha os dados abaixo para começar</span>
+            <InputLogin
+              name="name"
+              type="text"
+              placeholder="Nome"
+              autoComplete="off"
+            />
+            <InputLogin
+              name="surname"
+              type="text"
+              placeholder="Sobrenome"
+              autoComplete="off"
+            />
             <InputLogin
               name="email"
               type="email"
@@ -42,14 +50,6 @@ const Login = () => {
               placeholder="Senha"
             />
 
-            <div id="remember-me">
-              <div id="remember-me-check">
-                <input type="checkbox" id="check" />
-                <label htmlFor="check">Lembrar-me</label>
-              </div>
-
-              <a href="https://">Esqueci minha senha</a>
-            </div>
             <div id="check">
               <input
                 type="checkbox"
@@ -59,17 +59,8 @@ const Login = () => {
               <label htmlFor="showPass">Mostrar senha</label>
             </div>
             <button type="button" className="login-button">
-              Entrar
+              Cadastrar
             </button>
-            <footer>
-              <h3>Não tem conta?</h3>
-              <div id="actions-info">
-                <a href="/register">Cadastre-se</a>
-                <span id="icon-heart">
-                  É de graça <img src={purpleHeartIcon} alt="Coração" />
-                </span>
-              </div>
-            </footer>
           </fieldset>
         </form>
       </main>
@@ -77,4 +68,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

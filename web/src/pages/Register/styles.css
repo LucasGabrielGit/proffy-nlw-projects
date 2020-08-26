@@ -3,16 +3,8 @@
   height: 100vh;
 }
 
-#page-login main {
-  font-size: 1.4rem;
-}
-
-.logo-image {
-  padding-top: 1.8rem;
-}
-
 #page-login-side {
-  font: 700 1.8rem Archivo;
+  font: 700 2.4rem Archivo;
   display: flex;
   text-align: left;
   background: var(--color-background-login);
@@ -40,7 +32,15 @@
 
 #page-login main form fieldset {
   border: 0;
-  padding: 0 8rem 0 8rem;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#page-login main form fieldset span {
+  margin-bottom: 3.2rem;
+  font: 700 1.4rem Poppins;
 }
 
 #page-login main fieldset legend {
@@ -49,20 +49,11 @@
   margin-bottom: 2.4rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   width: 100%;
   padding-bottom: 1.6rem;
   padding-top: 3.2rem;
-}
-
-#page-login main fieldset footer {
-  padding-top: 3.2rem;
-}
-
-#page-login main fieldset footer a {
-  text-decoration: none;
-  font: 700 1.8rem Poppins;
-  color: var(--color-primary);
+  text-align: left;
 }
 
 #actions-info {
@@ -105,16 +96,19 @@
   font-weight: bold;
   margin-top: 1.6rem;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
 }
 
 #check {
   font-weight: bold;
+  align-items: center;
+  justify-content: center;
 }
 
 #check input {
   margin-right: 1.2rem;
+  margin-top: 1.2rem;
 }
 
 #remember-me a {
@@ -153,5 +147,9 @@
 
   #page-login main form fieldset {
     width: 40vw;
+  }
+
+  #page-login main form {
+    padding-bottom: 4.2rem;
   }
 }
