@@ -95,6 +95,7 @@
   justify-content: center;
   transition: 0.2s;
   margin-top: 3.6rem;
+  outline: 0;
 }
 
 #page-login main form button:hover {
@@ -117,13 +118,33 @@
   margin-right: 1.2rem;
 }
 
-#remember-me a {
+/* #remember-me a {
   font: 700 1.4rem Poppins;
   text-decoration: none;
   color: var(--color-text-in-link);
-}
+} */
+
 #page-login main form #remember-me-check > label {
   margin-left: 1.2rem;
+}
+
+.link {
+  display: inline-block;
+  color: var(--color-text-in-link);
+  text-decoration: none;
+}
+
+.link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.2rem;
+  background: var(--color-background-login);
+  transition: width 0.3s;
+}
+
+.link:hover::after {
+  width: 100%;
 }
 
 @media (min-width: 700px) {

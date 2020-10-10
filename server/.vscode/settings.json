@@ -1,7 +1,11 @@
 {
     "cSpell.words": [
+        "dbuser",
         "deletar",
         "knexfile",
+        "mydb",
+        "postgres",
+        "postgresql",
         "registro",
         "respawn",
         "tsnd",

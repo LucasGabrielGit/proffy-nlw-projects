@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(cors())
 app.use(routes);
-app.listen(3333);
+app.listen(8080);
 
 //GET: Buscar ou listar uma informação
 //POST: Criar alguma nova informação

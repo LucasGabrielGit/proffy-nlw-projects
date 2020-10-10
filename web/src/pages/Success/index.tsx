@@ -1,8 +1,9 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import successIcon from "../../assets/images/icons/success-check-icon.svg";
-
 import "./styles.css";
+
+
 const SuccessPage = () => {
   return (
     <div id="page-success">
@@ -16,7 +17,7 @@ const SuccessPage = () => {
             Tenha uma ótima experiência.
           </span>
         </div>
-        <button>Fazer login</button>
+        <Link className="to-login" to="/login">Fazer login</Link>
       </div>
     </div>
   );

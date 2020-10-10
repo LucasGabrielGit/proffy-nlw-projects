@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState, FormEvent } from "react";
+import ImageUploading from "react-images-uploading";
 import { useHistory } from "react-router-dom";
 
 import PageHeader from "../../components/PageHeader";
@@ -15,7 +16,7 @@ function TeacherForm() {
   const history = useHistory();
 
   const [name, setName] = useState("");
-  const [avatar, setAvatar] = useState("");
+  const [avatar, setAvatar] = useState([]);
   const [whatsapp, setWhatsapp] = useState("");
   const [bio, setBio] = useState("");
 
@@ -37,6 +38,12 @@ function TeacherForm() {
       },
     ]);
   }
+
+  const handleDeleteScheduleItem = (e: number) => {
+    const array = [...scheduleItems];
+    array.splice(e, 1);
+    setScheduleItems(array);
+  };
 
   function handleCreateClass(e: FormEvent) {
     e.preventDefault();
@@ -63,7 +70,7 @@ function TeacherForm() {
   function setScheduleItemValue(
     position: number,
     field: string,
-    value: string,
+    value: string
   ) {
     const updatedScheduleItems = scheduleItems.map((scheduleItem, index) => {
       if (index === position) {
@@ -87,33 +94,29 @@ function TeacherForm() {
         <form onSubmit={handleCreateClass}>
           <fieldset>
             <legend>Seus dados</legend>
-            <Input
-              name="name"
-              label="Nome completo"
-              value={name}
-              onChange={(e) => {
-                setName(e.target.value);
-              }}
-            />
-            <Input
-              name="avatar"
-              label="Avatar"
-              value={avatar}
-              onChange={(e) => {
-                setAvatar(e.target.value);
-              }}
-            />
-            <Input
-              name="whatsapp"
-              label="Whatsapp"
-              value={whatsapp}
-              onChange={(e) => {
-                setWhatsapp(e.target.value);
-              }}
-            />
+            <div className="profile">
+              <ImageUploading
+                maxNumber={1}
+                value={avatar}
+                dataURLKey="data_url"
+                onChange={() => {
+                  console.log(5 - 6);
+                }}
+              ></ImageUploading>
+              <span>Lucas Gabriel</span>
+              <Input
+                name="whatsapp"
+                label="Whatsapp"
+                value={whatsapp}
+                onChange={(e) => {
+                  setWhatsapp(e.target.value);
+                }}
+              />
+            </div>
             <Textarea
               name="bio"
               label="Biografia"
+              warn="(Máximo 300 caracteres)"
               value={bio}
               onChange={(e) => {
                 setBio(e.target.value);
@@ -158,7 +161,7 @@ function TeacherForm() {
               </button>
             </legend>
 
-            {scheduleItems.map((scheduleItem, index) => {
+            {scheduleItems.map((scheduleItem, index: number) => {
               return (
                 <div className="schedule-item" key={index}>
                   <Select
@@ -197,7 +200,14 @@ function TeacherForm() {
                     }
                   />
 
-                  {/* <button type="button">- Remover horário</button> */}
+                  <button
+                    type="button"
+                    onClick={() => {
+                      handleDeleteScheduleItem(index);
+                    }}
+                  >
+                    - Remover horário
+                  </button>
                 </div>
               );
             })}

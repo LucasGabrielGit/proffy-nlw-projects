@@ -45,10 +45,10 @@ const Login = () => {
             <div id="remember-me">
               <div id="remember-me-check">
                 <input type="checkbox" id="check" />
-                <label htmlFor="check">Lembrar-me</label>
+                <label htmlFor="check" className="link">Lembrar-me</label>
               </div>
 
-              <a href="https://">Esqueci minha senha</a>
+              <a className="link" href="https://">Esqueci minha senha</a>
             </div>
             <div id="check">
               <input
@@ -56,7 +56,7 @@ const Login = () => {
                 id="showPass"
                 onClick={toggleShowPassword}
               />
-              <label htmlFor="showPass">Mostrar senha</label>
+              <label htmlFor="showPass" className="link">Mostrar senha</label>
             </div>
             <button type="button" className="login-button">
               Entrar
@@ -64,7 +64,7 @@ const Login = () => {
             <footer>
               <h3>Não tem conta?</h3>
               <div id="actions-info">
-                <a href="/register">Cadastre-se</a>
+                <a href="/register" className="link">Cadastre-se</a>
                 <span id="icon-heart">
                   É de graça <img src={purpleHeartIcon} alt="Coração" />
                 </span>
